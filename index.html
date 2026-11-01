@@ -17,6 +17,31 @@
         
       </style>
     </head>
+    <div class="contenedor-encuesta">
+        <h3>¿Te gusta mi trabajo?</h3>
+        
+        <form>
+            <label class="opcion">
+                <input type="radio" name="respuesta" value="si"> Sí, me encanta
+            </label>
+            
+            <label class="opcion">
+                <input type="radio" name="respuesta" value="regular"> Está bien, pero puede mejorar
+            </label>
+            
+            <label class="opcion">
+                <input type="radio" name="respuesta" value="no"> No me gusta
+            </label>
+            
+            <button type="button" class="btn-enviar" onclick="votar()">Enviar respuesta</button>
+        </form>
+    </div>
+
+    <script>
+        function votar() {
+            alert("¡Gracias por tu voto en la página de Smith!");
+        }
+    </script>
 <body>
   <h1>HOLA A LOS QUE VEN</h1>
   <p>SMITH</p>  <p>tifani mamañema</p>
