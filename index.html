@@ -1,1 +1,183 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIENVENIDOS A MI WEB</title> <!-- Corregido: tittle -> title -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 48px;
+            color: #1a252f;
+            text-align: center;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .descripcion {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #4a5568;
+        }
+        /* Contenedor elegante para la encuesta */
+        .contenedor-encuesta {
+            background-color: #ffffff;
+            max-width: 400px;
+            margin: 30px auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .contenedor-encuesta h3 {
+            color: #1a252f;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        /* Espaciado para cada opción de respuesta */
+        .opcion {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #4a5568;
+            cursor: pointer;
+        }
+
+        .opcion input {
+            margin-right: 10px;
+        }
+
+        /* Botón formal y estilizado */
+        .btn-enviar {
+            background-color: #1a252f;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+
+        .btn-enviar:hover {
+            background-color: #2c3e50;
+        }
+
+        /* Estilos para los resultados */
+        .resultados {
+            background-color: #ffffff;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        .resultados h4 {
+            margin-top: 0;
+            color: #1a252f;
+        }
+        .conteo-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #4a5568;
+        }
+        .votos-numero {
+            font-weight: bold;
+            color: #1a252f;
+        }
+    </style>
+</head>
+<body>
+
+  <h1>😃</h1>
+  <p style="text-align: center; font-weight: bold; font-size: 24px; color: #1a252f;">SMITH</p> 
+  <p class="descripcion">Bienvenido a este sitio web. Esta página ha sido creada por mí; ando aprendiendo a programar y este es el paso uno de mi futuro.</p>
+
+  <div class="contenedor-encuesta">
+      <h3>¿Te gusta mi trabajo?</h3>
+      
+      <form id="form-encuesta">
+          <label class="opcion">
+              <input type="radio" name="respuesta" value="si"> Sí, me encanta
+          </label>
+          
+          <label class="opcion">
+              <input type="radio" name="respuesta" value="regular"> Está bien, pero puede mejorar
+          </label>
+          
+          <label class="opcion">
+              <input type="radio" name="respuesta" value="no"> No me gusta
+          </label>
+          
+          <button type="button" class="btn-enviar" onclick="votar()">Enviar respuesta</button>
+      </form>
+  </div>
+
+  <!-- Bloque visual del contador -->
+  <div class="resultados">
+      <h4>Resultados actuales:</h4>
+      <div class="conteo-item">
+          <span>Sí, me encanta:</span>
+          <span class="votos-numero" id="cont-si">0</span>
+      </div>
+      <div class="conteo-item">
+          <span>Está bien, pero puede mejorar:</span>
+          <span class="votos-numero" id="cont-regular">0</span>
+      </div>
+      <div class="conteo-item">
+          <span>No me gusta:</span>
+          <span class="votos-numero" id="cont-no">0</span>
+      </div>
+  </div>
+
+  <script>
+      // Variables para llevar la cuenta de los votos
+      let votosSi = 0;
+      let votosRegular = 0;
+      let votosNo = 0;
+
+      function votar() {
+          // Buscamos cuál opción está seleccionada
+          const seleccionada = document.querySelector('input[name="respuesta"]:checked');
+
+          if (!seleccionada) {
+              alert("Por favor, selecciona una opción antes de enviar.");
+              return;
+          }
+
+          // Sumamos según la opción elegida
+          if (seleccionada.value === "si") {
+              votosSi++;
+              document.getElementById("cont-si").innerText = votosSi;
+          } else if (seleccionada.value === "regular") {
+              votosRegular++;
+              document.getElementById("cont-regular").innerText = votosRegular;
+          } else if (seleccionada.value === "no") {
+              votosNo++;
+              document.getElementById("cont-no").innerText = votosNo;
+          }
+
+          alert("¡Gracias por tu voto en la página de Smith!");
+      }
+  </script>
+
+</body>
+</html>
