@@ -131,7 +131,7 @@
       </form>
   </div>
 
-  <!-- Bloque visual del contador -->
+  
   <div class="resultados">
       <h4>Resultados actuales:</h4>
       <div class="conteo-item">
@@ -149,13 +149,11 @@
   </div>
 
   <script>
-      // Variables para llevar la cuenta de los votos
       let votosSi = 0;
       let votosRegular = 0;
       let votosNo = 0;
 
       function votar() {
-          // Buscamos cuál opción está seleccionada
           const seleccionada = document.querySelector('input[name="respuesta"]:checked');
 
           if (!seleccionada) {
@@ -163,7 +161,6 @@
               return;
           }
 
-          // Sumamos según la opción elegida
           if (seleccionada.value === "si") {
               votosSi++;
               document.getElementById("cont-si").innerText = votosSi;
@@ -177,7 +174,9 @@
 
           alert("¡Gracias por tu voto en la página de Smith!");
       }
+ let votos = JSON.parse(localStorage.getItem('votos')) || { si: 0, regular: 0, no: 0 };
   </script>
+    
 
 </body>
 </html>
