@@ -1,230 +1,265 @@
+
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BioAgro Colombia S.A.S. | Innovación Cafetera & Agrotecnología</title>
-    <!-- Tailwind CSS CDN -->
+    <title>Tiendas D1 - Pioneros del Hard Discount en Colombia</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Fonts Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet">
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            green: '#0B4F37',
-                            emerald: '#10B981',
-                            coffee: '#4A2C11',
-                            amber: '#D97706',
-                            gold: '#F59E0B',
-                            cream: '#FDFBF7',
-                            accent: '#C59B27'
-                        }
+                        d1red: '#E30613',
+                        d1yellow: '#FFED00',
+                        d1blue: '#00519E',
+                        d1darkblue: '#003366',
+                        d1lightgray: '#F8F9FA'
                     },
                     fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
+                        sans: ['Inter', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        .hero-bg {
-            background: linear-gradient(180deg, rgba(11, 79, 55, 0.88) 0%, rgba(30, 20, 10, 0.85) 100%), 
-                        url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        .gradient-d1 {
+            background: linear-gradient(135deg, #E30613 0%, #00519E 100%);
         }
-        .colombia-stripe {
-            height: 4px;
-            background: linear-gradient(90deg, #FCD116 0% 50%, #003893 50% 75%, #CE1126 75% 100%);
+        .text-shadow {
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
-<body class="bg-brand-cream text-slate-800 font-sans antialiased selection:bg-brand-emerald selection:text-white">
-
-    <!-- Top Colombian Flag Ribbon -->
-    <div class="colombia-stripe w-full fixed top-0 z-50"></div>
-
-    <!-- Navigation Bar -->
-    <nav class="fixed top-1 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-900/10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-brand-green flex items-center justify-center text-white shadow-md">
-                    <i class="ph-bold ph-plant text-2xl text-brand-gold"></i>
-                </div>
-                <div>
-                    <span class="text-xl font-extrabold text-brand-green tracking-tight flex items-center gap-1.5">
-                        BioAgro <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-100 text-brand-green font-bold uppercase">S.A.S.</span>
-                    </span>
-                    <span class="block text-[10px] text-slate-500 font-medium tracking-widest uppercase">Colombia • Agrotech</span>
-                </div>
-            </a>
-
-            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-700">
-                <a href="#nosotros" class="hover:text-brand-green transition-colors">Nosotros</a>
-                <a href="#servicios" class="hover:text-brand-green transition-colors">Servicios</a>
-                <a href="#quiz" class="hover:text-brand-green transition-colors flex items-center gap-1.5">
-                    <span class="w-2 h-2 rounded-full bg-brand-amber animate-pulse"></span> Test
-                </a>
-                <a href="#contacto" class="hover:text-brand-green transition-colors">Contacto</a>
-            </div>
-
-            <div class="hidden md:flex items-center">
-                <a href="#contacto" class="px-5 py-2.5 rounded-xl bg-brand-green hover:bg-emerald-800 text-white font-semibold text-sm shadow-md transition-all">
-                    Trabajemos Juntos
-                </a>
-            </div>
-
-            <button id="mobileMenuBtn" class="md:hidden p-2 text-slate-700 focus:outline-none">
-                <i class="ph-bold ph-list text-2xl"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Drawer -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3">
-            <a href="#nosotros" class="block py-2 text-slate-700 font-medium">Nosotros</a>
-            <a href="#servicios" class="block py-2 text-slate-700 font-medium">Servicios</a>
-            <a href="#quiz" class="block py-2 text-brand-amber font-semibold">Test Interactivo</a>
-            <a href="#contacto" class="block mt-2 w-full text-center py-3 rounded-xl bg-brand-green text-white font-semibold">Contáctanos</a>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header class="relative pt-32 pb-24 md:pt-40 md:pb-32 hero-bg text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold uppercase tracking-wider text-amber-300">
-                        <i class="ph-fill ph-flag text-sm text-yellow-400"></i> Empresa Privada Colombiana
+<body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-d1red selection:text-white">
+    <header class="sticky top-0 z-50 bg-white border-b-4 border-d1red shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="bg-d1red text-d1yellow font-black text-3xl px-3 py-1 rounded border-2 border-d1yellow shadow-sm transform group-hover:scale-105 transition-transform">
+                        D1
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight font-serif">
-                        Innovación Agrícola y Café de <span class="text-amber-400 italic">Clase Mundial</span>.
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-xl text-d1blue tracking-wider leading-none">TIENDAS D1</span>
+                        <span class="text-[10px] font-bold text-gray-500 tracking-widest uppercase">Calidad alta a precios bajos</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-8 font-semibold text-sm">
+                    <a href="#inicio" class="text-gray-700 hover:text-d1red transition-colors py-2 border-b-2 border-transparent hover:border-d1red">Inicio</a>
+                    <a href="#historia" class="text-gray-700 hover:text-d1red transition-colors py-2 border-b-2 border-transparent hover:border-d1red">Origen e Historia</a>
+                    <a href="#exito" class="text-gray-700 hover:text-d1red transition-colors py-2 border-b-2 border-transparent hover:border-d1red">Modelo de Éxito</a>
+                    <a href="#impacto" class="text-gray-700 hover:text-d1red transition-colors py-2 border-b-2 border-transparent hover:border-d1red">Empleo e Impacto</a>
+                    <a href="#linea-tiempo" class="text-gray-700 hover:text-d1red transition-colors py-2 border-b-2 border-transparent hover:border-d1red">Línea de Tiempo</a>
+                </nav>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-d1red focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 px-4 pt-2 pb-4 space-y-2 font-medium">
+            <a href="#inicio" class="block py-2 text-gray-700 hover:text-d1red border-b border-gray-100">Inicio</a>
+            <a href="#historia" class="block py-2 text-gray-700 hover:text-d1red border-b border-gray-100">Origen e Historia</a>
+            <a href="#exito" class="block py-2 text-gray-700 hover:text-d1red border-b border-gray-100">Modelo de Éxito</a>
+            <a href="#impacto" class="block py-2 text-gray-700 hover:text-d1red border-b border-gray-100">Empleo e Impacto</a>
+            <a href="#linea-tiempo" class="block py-2 text-gray-700 hover:text-d1red">Línea de Tiempo</a>
+        </div>
+    </header>
+    <section id="inicio" class="relative bg-gradient-to-r from-d1darkblue via-d1blue to-blue-900 text-white overflow-hidden py-16 md:py-24">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-d1yellow blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-d1red blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-d1yellow text-d1darkblue font-extrabold text-xs md:text-sm px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                        <i data-lucide="award" class="w-4 h-4"></i> Pioneros del Hard Discount en Colombia
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+                        La revolución del comercio retail que cambió a <span class="text-d1yellow underline decoration-d1red underline-offset-8">Colombia</span>
                     </h1>
-                    <p class="text-lg text-slate-200 max-w-2xl mx-auto lg:mx-0 font-light">
-                        En <strong>BioAgro Colombia S.A.S.</strong> impulsamos la productividad del campo mediante tecnología IoT y biotecnología avanzada, llevando el orgullo de nuestras regiones al mundo.
+                    <p class="text-lg md:text-xl text-blue-100 font-normal leading-relaxed">
+                        Desde su fundación en 2009, Tiendas D1 transformó los hábitos de compra de los colombianos ofreciendo productos de alta calidad al precio más bajo del mercado, siempre muy cerca de tu hogar.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                        <a href="#quiz" class="px-7 py-4 rounded-xl bg-brand-gold hover:bg-amber-500 text-slate-950 font-bold shadow-lg transition-all flex items-center justify-center gap-2">
-                            <i class="ph-bold ph-brain text-xl"></i> Realizar Test Interactivo
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#historia" class="bg-d1red hover:bg-red-700 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                            Conocer la Historia <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#impacto" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold px-7 py-3.5 rounded-xl transition-all backdrop-blur-sm">
+                            Impacto Social
                         </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- SECCIÓN INTERACTIVA: QUIZ -->
-    <section id="quiz" class="py-24 bg-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="text-brand-amber font-extrabold text-xs uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full">Trivia Dinámica</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 mt-3 font-serif">Pon a prueba tus conocimientos sobre Agrotech y Café</h2>
-            </div>
-
-            <div id="quizContainer" class="bg-brand-cream border border-slate-200 p-6 sm:p-8 rounded-3xl shadow-xl">
-                <div id="questionBox">
-                    <span id="questionProgress" class="text-xs font-bold text-brand-green uppercase tracking-wider">Pregunta 1 de 2</span>
-                    <h3 id="questionText" class="text-xl font-bold text-slate-900 mt-2 mb-6">¿Cuál es el principal beneficio de los sensores agrotecnológicos en cultivos de café?</h3>
-                    <div id="optionsList" class="space-y-3">
-                        <!-- Opciones inyectadas por JS -->
+                <div class="lg:col-span-5 relative">
+                    <div class="bg-white/10 backdrop-blur-md p-6 sm:p-8 rounded-3xl border border-white/20 shadow-2xl relative">
+                        <div class="absolute -top-6 -right-6 bg-d1red text-d1yellow font-extrabold p-4 rounded-2xl shadow-xl flex items-center justify-center border-2 border-d1yellow">
+                            <span class="text-center text-xs tracking-tighter uppercase leading-tight">#1 EN COBERTURA<br><span class="text-white text-lg">Y PREFERENCIA</span></span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-6 text-d1yellow flex items-center gap-2">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i> Impacto en Cifras
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white/10 p-4 rounded-xl border border-white/10">
+                                <span class="block text-3xl sm:text-4xl font-black text-white">2009</span>
+                                <span class="text-xs sm:text-sm text-blue-200">Año de Fundación</span>
+                            </div>
+                            <div class="bg-white/10 p-4 rounded-xl border border-white/10">
+                                <span class="block text-3xl sm:text-4xl font-black text-d1yellow">+2.400</span>
+                                <span class="text-xs sm:text-sm text-blue-200">Tiendas a nivel nacional</span>
+                            </div>
+                            <div class="bg-white/10 p-4 rounded-xl border border-white/10">
+                                <span class="block text-3xl sm:text-4xl font-black text-d1yellow">+23.000</span>
+                                <span class="text-xs sm:text-sm text-blue-200">Empleos Directos</span>
+                            </div>
+                            <div class="bg-white/10 p-4 rounded-xl border border-white/10">
+                                <span class="block text-3xl sm:text-4xl font-black text-white">+520</span>
+                                <span class="text-xs sm:text-sm text-blue-200">Municipios cubiertos</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div id="quizResult" class="hidden text-center py-8 space-y-4">
-                    <div class="w-16 h-16 bg-emerald-100 text-brand-green rounded-full flex items-center justify-center text-3xl mx-auto">
-                        <i class="ph-bold ph-trophy"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-slate-900">¡Test Completado!</h3>
-                    <p id="scoreText" class="text-slate-600 text-base"></p>
-                    <button onclick="resetQuiz()" class="px-6 py-2.5 bg-brand-green text-white font-semibold rounded-xl text-sm">Volver a intentar</button>
                 </div>
             </div>
         </div>
     </section>
+    <section id="historia" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-d1red font-bold uppercase tracking-wider text-sm">Origen y Fundación</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2">¿Cómo nació y quién creó Tiendas D1?</h2>
+                <div class="w-20 h-1.5 bg-d1yellow mx-auto mt-4 rounded-full"></div>
+            </div>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 text-center text-sm">
-        <p>&copy; 2026 BioAgro Colombia S.A.S. Todos los derechos reservados. NIT: 901.482.394-8</p>
-    </footer>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-gray-600 leading-relaxed">
+                    <p class="text-lg">
+                        <strong>Tiendas D1</strong> fue fundada en el año <strong>2009 en Medellín (Itagüí, Antioquia)</strong> por el empresario chileno-alemán <strong>Michel Olmi</strong>, a través de la matriz <em>Koba International Group</em>.
+                    </p>
+                    <p>
+                        Olmi identificó una oportunidad histórica en el mercado colombiano: la ausencia del formato de descuento duro (<em>Hard Discount</em>), un modelo traído y adaptado del éxito europeo de cadenas como Aldi y Lidl. La visión inicial era ofrecer una canasta básica de alta calidad a precios extremadamente competitivos, eliminando todo gasto innecesario en empaque, decoración y publicidad masiva.
+                    </p>
+                    <p>
+                        A medida que la cadena demostró su viabilidad y un crecimiento vertiginoso, en <strong>2015 el Grupo Valorem</strong> (holding de la prestigiosa familia Santo Domingo) adquirió la participación mayoritaria de Koba Colombia, consolidando a D1 como un gigante corporativo con sólido respaldo financiero institucional.
+                    </p>
 
-    <!-- SCRIPT DE INTERACTIVIDAD -->
-    <script>
-        // Menú Móvil
-        const btn = document.getElementById('mobileMenuBtn');
-        const menu = document.getElementById('mobileMenu');
-        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+                    <div class="bg-gray-50 border-l-4 border-d1blue p-5 rounded-r-xl">
+                        <p class="italic font-medium text-gray-800">
+                            "El objetivo no era solo vender más barato, sino redefinir cómo la familia colombiana merca todos los días, haciendo rendir más el presupuesto de los hogares."
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div class="bg-d1red/10 text-d1red p-3 rounded-xl">
+                            <i data-lucide="user-check" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Fundador Visionario</h4>
+                            <p class="text-sm text-gray-600 mt-1">Michel Olmi ideó el concepto adaptado a la idiosincrasia del consumidor colombiano, estructurando la logística desde Medellín.</p>
+                        </div>
+                    </div>
 
-        // Lógica del Quiz
-        const quizData = [
-            {
-                question: "¿Cuál es el principal beneficio de la tecnología IoT aplicada por BioAgro en cultivos cafeteros?",
-                options: [
-                    "Aumentar el consumo de agua innecesario",
-                    "Optimizar el riego y reducir costos operativos hasta un 35%",
-                    "Eliminar por completo la mano de obra campesina"
-                ],
-                correct: 1
-            },
-            {
-                question: "¿Qué significa legalmente la sigla S.A.S. en Colombia?",
-                options: [
-                    "Sociedad Anónima Simplificada",
-                    "Sociedad por Acciones Simplificada",
-                    "Sistema de Agricultura Sostenible"
-                ],
-                correct: 1
-            }
-        ];
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div class="bg-d1blue/10 text-d1blue p-3 rounded-xl">
+                            <i data-lucide="building-2" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Grupo Valorem</h4>
+                            <p class="text-sm text-gray-600 mt-1">El respaldo del conglomerado colombiano permitió acelerar la apertura de centros de distribución y miles de tiendas en todo el territorio.</p>
+                        </div>
+                    </div>
 
-        let currentQuestion = 0;
-        let score = 0;
+                    <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex items-start gap-4 hover:shadow-md transition-shadow">
+                        <div class="bg-d1yellow/20 text-yellow-800 p-3 rounded-xl">
+                            <i data-lucide="store" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-gray-900">Primera Tienda</h4>
+                            <p class="text-sm text-gray-600 mt-1">Inició operaciones en un pequeño local en el barrio San Pío de Itagüí en 2009, expandiéndose rápidamente a todo el Valle de Aburrá.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="exito" class="py-20 bg-d1lightgray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-d1blue font-bold uppercase tracking-wider text-sm">Claves del Éxito</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-gray-900 mt-2">¿Por qué llegó a ser tan famosa en Colombia?</h2>
+                <p class="text-gray-600 mt-3">El secreto radica en la disrupción del modelo tradicional de supermercados a través de 4 pilares fundamentales:</p>
+            </div>
 
-        function loadQuiz() {
-            const q = quizData[currentQuestion];
-            document.getElementById('questionProgress').innerText = `Pregunta ${currentQuestion + 1} de ${quizData.length}`;
-            document.getElementById('questionText').innerText = q.question;
-            const list = document.getElementById('optionsList');
-            list.innerHTML = '';
-            q.options.forEach((opt, index) => {
-                const btn = document.createElement('button');
-                btn.className = "w-full text-left p-4 rounded-xl bg-white border border-slate-200 hover:border-brand-green font-medium text-slate-700 transition-all flex items-center justify-between";
-                btn.innerHTML = `<span>${opt}</span> <i class="ph-bold ph-arrow-right text-slate-400"></i>`;
-                btn.onclick = () => selectOption(index);
-                list.appendChild(btn);
-            });
-        }
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-d1red text-white rounded-2xl flex items-center justify-center font-bold mb-6">
+                        <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Marcas Propias de Alta Calidad</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Desarrollaron alianzas directas con fabricantes nacionales e internacionales para crear marcas propias (como Kyrey, Rendidón, Latti, Montefrío) igual de buenas que las tradicionales pero mucho más económicas.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-d1blue text-white rounded-2xl flex items-center justify-center font-bold mb-6">
+                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Formato de Cercanía (Barrio)</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        En lugar de megatiendas periféricas, instalaron locales pequeños en el corazón de las comunidades y barrios, permitiendo ir caminando y ahorrando transporte a los clientes.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-d1yellow text-d1darkblue rounded-2xl flex items-center justify-center font-bold mb-6">
+                        <i data-lucide="zap" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Eficiencia Operativa Extrema</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Productos exhibidos en sus cajas originales, surtido acotado a productos esenciales (~1.000 referencias) y menor costo publicitario repercuten directamente en descuentos finales.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-d1darkblue text-white rounded-2xl flex items-center justify-center font-bold mb-6">
+                        <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Democratización del Consumo</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Permitió que familias de todos los estratos socioeconómicos accedieran a productos importados (chocolates, quesos, vinos) y de limpieza avanzada a precios altamente accesibles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="impacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-d1darkblue to-d1blue rounded-3xl text-white p-8 sm:p-12 md:p-16 relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 right-0 -mt-12 -mr-12 w-64 h-64 bg-d1red rounded-full opacity-30 blur-2xl"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+                    <div class="lg:col-span-7 space-y-6">
+                        <span class="bg-d1yellow text-d1darkblue font-extrabold text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider">
+                            Desarrollo Nacional
+                        </span>
+                        <h2 class="text-3xl sm:text-4xl font-black leading-tight">
+                            ¿Cuánto empleo genera y qué tan importante es para Colombia?
+                        </h2>
+                        <p class="text-blue-100 leading-relaxed text-base sm:text-lg">
+                            Tiendas D1 se ha consolidado como una de las empresas empleadoras más grandes y con mayor impacto formal en Colombia.
+                        </p>
 
-        function selectOption(index) {
-            if (index === quizData[currentQuestion].correct) {
-                score++;
-            }
-            currentQuestion++;
-            if (currentQuestion < quizData.length) {
-                loadQuiz();
-            } else {
-                document.getElementById('questionBox').classList.add('hidden');
-                const res = document.getElementById('quizResult');
-                res.classList.remove('hidden');
-                document.getElementById('scoreText').innerText = `Has acertado ${score} de ${quizData.length} preguntas correctamente. ¡Gracias por conocer más sobre nuestra empresa colombiana!`;
-            }
-        }
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-start gap-3">
+                                <div class="bg-d1red p-1.5 rounded-full mt-1">
+                                    <i data-lucide="check" class="w-4 h-4 text-white"></i>
+                                </div>
+                                <p class="text-sm sm:text-base text-blue-50">
+                                    <strong>+23.000 Empleos Directos:</strong> Con contratos formales, prestaciones completas y estabilidad laboral para miles de jóvenes en su primer empleo.
+                                </p>
+                            </div>
 
-        function resetQuiz() {
-            currentQuestion = 0;
-            score = 0;
-            document.getElementById('quizResult').classList.add('hidden');
-            document.getElementById('questionBox').classList.remove('hidden');
-            loadQuiz();
-        }
-
-        loadQuiz();
-    </script>
-</body>
-</html>
-
-             
+                            <div class="flex items-star
